@@ -767,6 +767,20 @@ hr {
             border-top: 1px solid #444;
         }
 
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
 
 
     
