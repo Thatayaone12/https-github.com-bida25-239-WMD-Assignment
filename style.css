@@ -405,6 +405,48 @@ td:last-child{
 th.last-child{
     text-align: right;
 }
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+,footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-col-1 , .footer-col-2, .footer-col-3{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2 , .footer-col-3{
+    flex-basis: 12%;
+    text-align: center
+}
+ul{
+    list-style-type: none;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright{
+    text-align: center;
+}
 
 /*--------------account-page------------*/
 
@@ -666,106 +708,102 @@ hr {
    align-items: flex-start;
 }
 
-        .info-item i {
-            font-size: 1.5rem;
-            margin-top: 5px;
+.info-item i {
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+.info-item h4 {
+    margin-bottom: 5px;
+}
+
+/* Right Side - Form */
+.contact-form {
+    padding: 60px 50px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff523b;
+    box-shadow: 0 0 0 4px rgba(255, 82, 59, 0.15);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+ }
+
+.btn {
+    background: #ff523b;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+ }
+ .btn:hover {
+    background: #e63939;
+    transform: translateY(-3px);
+}
+/* Footer */
+.footer {
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
         }
 
-        .info-item h4 {
-            margin-bottom: 5px;
-        }
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+   justify-content: space-around;
+ }
+.footer-col {
+   min-width: 250px;
+ }
 
-        /* Right Side - Form */
-        .contact-form {
-            padding: 60px 50px;
-        }
+.footer h3 {
+   color: #fff;
+   margin-bottom: 20px;
+}
+.footer ul {
+   list-style: none;
+ }
 
-        .form-group {
-            margin-bottom: 25px;
-        }
+.footer ul li a {
+   color: #8a8a8a;
+   text-decoration: none;
+ }
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px 20px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-        }
+.footer ul li a:hover {
+  color: #ff523b;
+}
 
-        .form-group input:focus,
-        .form-group textarea:focus {
-            border-color: #ff523b;
-            box-shadow: 0 0 0 4px rgba(255, 82, 59, 0.15);
-            outline: none;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        .btn {
-            background: #ff523b;
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border-radius: 50px;
-            cursor: pointer;
-            width: 100%;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: #e63939;
-            transform: translateY(-3px);
-        }
-
-        /* Footer */
-        .footer {
-            background: #000;
-            color: #8a8a8a;
-            font-size: 14px;
-            padding: 60px 0 20px;
-        }
-
-        .footer .row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            justify-content: space-around;
-        }
-
-        .footer-col {
-            min-width: 250px;
-        }
-
-        .footer h3 {
-            color: #fff;
-            margin-bottom: 20px;
-        }
-
-        .footer ul {
-            list-style: none;
-        }
-
-        .footer ul li a {
-            color: #8a8a8a;
-            text-decoration: none;
-        }
-
-        .footer ul li a:hover {
-            color: #ff523b;
-        }
-
-        .copyright {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #444;
-        }
+ .copyright {
+   text-align: center;
+   margin-top: 30px;
+   padding-top: 20px;
+   border-top: 1px solid #444;
+}
 
 @media (max-width: 768px) {
     nav ul li {
