@@ -3,52 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brooks & CO | Ecommerce Website</title>
+    <title>Brooks & CO | Home</title>
     <link rel="stylesheet" href="style.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+
+
     <header class="header">
         <div class="container">
-            <div class="navbar">
+            <nav class="navbar">
                 <div class="logo">
-                    <img src="images/Brooks & CO.jpg" width="125px" alt="Brooks & CO Logo">
+                    <a href="index.html">
+                        <img src="images/Brooks & CO.jpg" width="125" alt="Brooks & CO Logo">
+                    </a>
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="account.html">Account</a></li>
-                        <li><a href="cart.html">Cart</a></li>
-                    </ul>
-                </nav>
-                <img src="images/cart.jpg" width="30px" height="30px" alt="Cart">
-            </div>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li class="cart-icon">
+                        <a href="cart.html">
+                            <img src="images/cart.jpg" width="28" height="28" alt="Cart">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-      </div>
     </header>
 
-    <!--------- Hero Section ------>
-    <section class="container">
+    <section class="hero-section container">
         <div class="row">
             <div class="col-2">
-                <h1>WorkoutReStyle<br> A New Style!</h1>
-                <p>Plays on "Give Your Workout A New Style!" – perfect for refreshing looks.</p>
-                <a href="#" class="btn">Explore Now &#8594;</a>
+                <h1>Workout ReStyle<br>A New You!</h1>
+                <p>Refresh your wardrobe with the latest trends in clothing, footwear, and accessories — all at prices that work for you.</p>
+                <a href="products.html" class="btn">Explore Now &#8594;</a>
             </div>
             <div class="col-2">
-                <img src="images/Cool-Clothing-Brand-eCommerce-Website-for-Women.png" alt="Hero Image">
+                <img src="images/Cool-Clothing-Brand-eCommerce-Website-for-Women.png" alt="Brooks & CO Fashion">
             </div>
         </div>
-    </div>
     </section>
 
-    <!-- Featured Categories -->
+    <!------Featured Categories--- -->
     <section class="categories">
         <div class="small-container">
+            <h2 class="title">Shop by Category</h2>
             <div class="row">
                 <div class="col-3">
                     <img src="images/category 1.jpg" alt="Category 1">
@@ -60,10 +65,10 @@
                     <img src="images/category 3.jpg" alt="Category 3">
                 </div>
             </div>
-         </div>
+        </div>
     </section>
 
-    <!-- Featured Products -->
+    <!---------Featured Products--------!>
     <section class="small-container">
         <h2 class="title">Featured Products</h2>
         <div class="row">
@@ -71,54 +76,44 @@
                 <img src="images/3pcs Young Girl Outfit_ Apricot Sweatshirt….jpg" alt="Apricot Sweatshirt">
                 <h4>Apricot Sweatshirt</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                 </div>
                 <p>P350.00</p>
             </div>
             <div class="col-4">
                 <img src="images/Men's Elegant Suit Set Royal Blue Business….jpg" alt="Men suit Royal Blue">
-                <h4>Men suit Royal Blue</h4>
+                <h4>Men's Royal Blue Suit</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                 </div>
-                <p>P2000.00</p>
+                <p>P2,000.00</p>
             </div>
             <div class="col-4">
                 <img src="images/Bootlegger - The Place for Jeans.jpg" alt="Jeans">
                 <h4>Jeans</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                 </div>
                 <p>P250.00</p>
             </div>
             <div class="col-4">
-                <img src="images/PRICES MAY VARY_ ❄️【FEATURES】The long sleeve dress….jpg" alt="Long Sleeve dress">
-                <h4>Long Sleeve dress</h4>
+                <img src="images/PRICES MAY VARY_ ❄️【FEATURES】The long sleeve dress….jpg" alt="Long Sleeve Dress">
+                <h4>Long Sleeve Dress</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                 </div>
                 <p>P950.00</p>
             </div>
             <div class="col-4">
-                <img src="images/2pcs_Set Teenage Boys Casual Simplistic Tie Dye….jpg" alt="Casual Simplistic Tie dye">
-                <h4>Casual Simplistic Tie dye</h4>
+                <img src="images/2pcs_Set Teenage Boys Casual Simplistic Tie Dye….jpg" alt="Casual Tie Dye">
+                <h4>Casual Tie Dye Set</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                 </div>
                 <p>P500.00</p>
             </div>
@@ -126,45 +121,40 @@
                 <img src="images/Premium Design_ Our boy suits feature a sports….jpg" alt="Boy Suits">
                 <h4>Boy Suits</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <p>P1750.00</p>
+                <p>P1,750.00</p>
             </div>
             <div class="col-4">
-                <img src="images/2pcs Men's Palm Tree Ombre Print Short Sleeve….jpg" alt="Ombre Short Sleve">
-                <h4>Ombre Short Sleve</h4>
+                <img src="images/2pcs Men's Palm Tree Ombre Print Short Sleeve….jpg" alt="Ombre Short Sleeve">
+                <h4>Ombre Short Sleeve</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
                 <p>P150.00</p>
             </div>
             <div class="col-4">
-                <img src="images/Young Boy Coconut Tree Print Shirt & Shorts….jpg" alt="Young Boy Shirt and shorts">
-                <h4>Young Boy Shirt and shorts</h4>
+                <img src="images/Young Boy Coconut Tree Print Shirt & Shorts….jpg" alt="Young Boy Shirt and Shorts">
+                <h4>Boy Shirt &amp; Shorts</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                 </div>
                 <p>P350.00</p>
             </div>
         </div>
 
+        <!----- Latest Products ------->
         <h2 class="title">Latest Products</h2>
         <div class="row">
             <div class="col-4">
                 <img src="images/3pcs_Set Street Cool Casual Teen Girls Loose Denim….jpg" alt="Girls Loose Denim">
                 <h4>Girls Loose Denim</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                 </div>
                 <p>P550.00</p>
             </div>
@@ -172,10 +162,8 @@
                 <img src="images/Fashion High Heels Luxury Women Pumps Rhinestone….jpg" alt="High Heels">
                 <h4>High Heels</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                 </div>
                 <p>P200.00</p>
             </div>
@@ -183,41 +171,34 @@
                 <img src="images/Introducing our Women Sneakers High Quality Tennis….jpg" alt="Women Sneakers">
                 <h4>Women Sneakers</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                 </div>
-                <p>P2350.00</p>
+                <p>P2,350.00</p>
             </div>
             <div class="col-4">
-                <img src="images/Men's Suits Slim Fit 3 Pieces Notch Lapel Formal….jpg" alt="Mens Suites Notch Lapel">
-                <h4>Mens Suites Notch Lapel</h4>
+                <img src="images/Men's Suits Slim Fit 3 Pieces Notch Lapel Formal….jpg" alt="Notch Lapel Suit">
+                <h4>Notch Lapel Suit</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                 </div>
-                <p>P1950.00</p>
+                <p>P1,950.00</p>
             </div>
             <div class="col-4">
-                <img src="images/The cutest booties for her! Leather with flexible….jpg" alt="Botties">
-                <h4>Botties</h4>
+                <img src="images/The cutest booties for her! Leather with flexible….jpg" alt="Booties">
+                <h4>Booties</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                 </div>
                 <p>P500.00</p>
             </div>
             <div class="col-4">
-                <img src="images/Tween Girl Y2K Style Meisjes Casual Distressed….jpg" alt="Style Meisjes">
-                <h4>Style Meisjes</h4>
+                <img src="images/Tween Girl Y2K Style Meisjes Casual Distressed….jpg" alt="Y2K Style">
+                <h4>Y2K Style Set</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
                 <p>P850.00</p>
@@ -226,8 +207,7 @@
                 <img src="images/Unique and gorgeous quality gown Price_15,000….jpg" alt="Women Gown">
                 <h4>Women Gown</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
                 <p>P350.00</p>
@@ -236,66 +216,60 @@
                 <img src="images/Size Chart                      Important Notice….jpg" alt="Formal Shoes">
                 <h4>Formal Shoes</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
                 <p>P950.00</p>
             </div>
             <div class="col-4">
-                <img src="images/Casual Collar  Stainless Steel  Chronograph….jpg" alt="Men watches">
-                <h4>Men watches</h4>
+                <img src="images/Casual Collar  Stainless Steel  Chronograph….jpg" alt="Men Watches">
+                <h4>Men Watches</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star-half-alt"></i>
                 </div>
-                <p>P1230.00</p>
+                <p>P1,230.00</p>
             </div>
             <div class="col-4">
-                <img src="images/Mens Watch Chronograph Analogue Quartz Waterproof….jpg" alt="Chronograph Analogue Quartz">
-                <h4>Chronograph Analogue Quartz</h4>
+                <img src="images/Mens Watch Chronograph Analogue Quartz Waterproof….jpg" alt="Chronograph Watch">
+                <h4>Chronograph Watch</h4>
                 <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                 </div>
-                <p>P1250.00</p>
+                <p>P1,250.00</p>
             </div>
-         </div>
-       </div>
+        </div>
     </section>
 
-    <!-- Offer Section -->
+    <!------------- OFFER SECTION ------- -->
     <section class="offer">
         <div class="small-container">
             <div class="row">
                 <div class="col-2">
-                    <img src="images/Men's 1_7 oz Eau de Toilette spray cologne Notes….jpg" class="offer-img" alt="Cologne">
+                    <img src="images/Men's 1_7 oz Eau de Toilette spray cologne Notes….jpg" class="offer-img" alt="Men's Cologne">
                 </div>
                 <div class="col-2">
-                    <p>Exclusively Available on BROOKS & CO</p>
-                    <h1>Men Eau de Toilette Cologne</h1>
-                    <small>Inspired by Rome's rebellious spirit, this 2019 woody spicy Eau de Toilette blends tradition and audacity in a studded black bottle (50 ml / 1.7 fl oz). Opens with salty mineral notes, violet leaf, and ginger for a fresh, oceanic vibe; heart adds sage and spice; base settles into woody vetiver and guaiac for a clean, earthy finish. Versatile for day-to-night, unisex appeal, lasts hours with a unique salty twist</small>
-                    <a href="#" class="btn">Buy Now &#8594;</a>
+                    <p>Exclusively Available on BROOKS &amp; CO</p>
+                    <h1>Men's Eau de Toilette Cologne</h1>
+                    <small>Inspired by Rome's rebellious spirit, this woody spicy Eau de Toilette blends tradition and audacity in a studded black bottle (50 ml / 1.7 fl oz). Opens with salty mineral notes, violet leaf, and ginger; heart adds sage and spice; base settles into woody vetiver for a clean, earthy finish.</small>
+                    <a href="products.html" class="btn">Buy Now &#8594;</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonial -->
+    <!----------- TESTIMONIAL---------->
     <section class="testimonial">
         <div class="small-container">
+            <h2 class="title">What Our Customers Say</h2>
             <div class="row">
                 <div class="col-3">
                     <i class="fas fa-quote-left"></i>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever</p>
+                    <p>"The quality of clothes from Brooks &amp; CO is outstanding. Fast delivery and great prices — I'm a loyal customer now!"</p>
                     <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     </div>
                     <img src="images/Sean Parker.jpg" alt="Sean Parker">
                     <h3>Sean Parker</h3>
@@ -304,9 +278,10 @@
         </div>
     </section>
 
-    <!-- Brands -->
-    <section class="brands">
+    <!---------Brands-----------!>
+    <aside class="brands">
         <div class="small-container">
+            <h2 class="title" style="font-size:1rem; line-height: 2rem;">Trusted Payment Methods</h2>
             <div class="row">
                 <div class="col-5">
                     <img src="images/paypal.png" alt="PayPal">
@@ -315,47 +290,59 @@
                     <img src="images/visa.png" alt="Visa">
                 </div>
                 <div class="col-5">
-                    <img src="images/playstore.png" alt="Play Store">
+                    <img src="images/playstore.png" alt="Google Play">
                 </div>
             </div>
         </div>
-    </section>
+    </aside>
 
-    <!-- Footer -->
+    <!----------FOOTER -------->
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="footer-col-1">
+            <div class="footer-row">
+                <div class="footer-col footer-col-1">
                     <h3>Download our App</h3>
-                    <p>Download App for Android and iOS mobile phones</p>
+                    <p>Get the Brooks &amp; CO app for Android and iOS</p>
                     <div class="app-logo">
-                        <img src="images/playstore.png" alt="Play Store">
-                        <img src="images/apple store.png" alt="App Store">
+                        <img src="images/playstore.png" alt="Google Play Store">
+                        <img src="images/apple store.png" alt="Apple App Store">
                     </div>
                 </div>
-                <div class="footer-col-2">
+                <div class="footer-col footer-col-2">
                     <h3>Useful Links</h3>
                     <ul>
-                        <li>coupons</li>
-                        <li>Blog posts</li>
-                        <li>Return Policy</li>
-                        <li>Join Affiliate</li>
+                        <li><a href="#">Coupons</a></li>
+                        <li><a href="#">Blog Posts</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Join Affiliate</a></li>
                     </ul>
                 </div>
-                <div class="footer-col-3">
+                <div class="footer-col footer-col-3">
                     <h3>Follow Us</h3>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>Instagram</li>
-                        <li>Youtube</li>
-                        <li>X</li>
+                    <ul class="social-links">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">X</a></li>
                     </ul>
                 </div>
             </div>
-            <hr>
-            <p class="copyright">Copyright 2026 - BROOKS & CO</p>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Brooks & CO. All rights reserved.</p>
+            </div>
         </div>
-      </div>
     </footer>
+
+    <script>
+        // Hamburger menu
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => {
+            const open = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!open));
+            navLinks.classList.toggle('open');
+        });
+    </script>
+
 </body>
 </html>
