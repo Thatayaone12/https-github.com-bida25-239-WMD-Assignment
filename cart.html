@@ -122,45 +122,90 @@
         </div>
     </footer>
 
-    <script>
-        // Hamburger menu
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        navToggle.addEventListener('click', () => {
-            const open = navToggle.getAttribute('aria-expanded') === 'true';
-            navToggle.setAttribute('aria-expanded', String(!open));
-            navLinks.classList.toggle('open');
-        });
+   // Hamburger menu
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+navToggle.addEventListener('click', () => {
+    const open = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!open));
+    navLinks.classList.toggle('open');
+});
 
-        // Cart logic
-        const TAX_RATE = 0.14;
+// Cart logic
+const TAX_RATE = 0.14;
 
-        function updateCart() {
-            let subtotal = 0;
-            document.querySelectorAll('.cart-item').forEach(item => {
-                const price = parseFloat(item.dataset.price);
-                const quantity = item.querySelector('.qty').value;
-                const itemTotal = price * quantity;
-                item.querySelector('.item-subtotal').textContent = `P${itemTotal.toFixed(2)}`;
-                subtotal += itemTotal;
-            });
-            const tax = subtotal * TAX_RATE;
-            const total = subtotal + tax;
-            document.getElementById('cart-subtotal').textContent = `P${subtotal.toFixed(2)}`;
-            document.getElementById('cart-tax').textContent = `P${tax.toFixed(2)}`;
-            document.getElementById('cart-total').textContent = `P${total.toFixed(2)}`;
-        }
+function getCart() {
+    return JSON.parse(localStorage.getItem('brooksCart') || '[]');
+}
 
-        document.querySelectorAll('.qty').forEach(input => {
-            input.addEventListener('change', updateCart);
+function saveCart(cart) {
+    localStorage.setItem('brooksCart', JSON.stringify(cart));
+}
+
+function renderCart() {
+    const cart = getCart();
+    const tbody = document.querySelector('#cart-table tbody');
+    tbody.innerHTML = '';
+
+    if (cart.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; padding:2rem;">Your cart is empty.</td></tr>';
+        updateTotals();
+        return;
+    }
+
+    cart.forEach((item, index) => {
+        const tr = document.createElement('tr');
+        tr.className = 'cart-item';
+        tr.dataset.price = item.price;
+        tr.dataset.index = index;
+        tr.innerHTML = `
+            <td>${item.name}</td>
+            <td><input type="number" class="qty" value="${item.qty}" min="1"></td>
+            <td class="item-subtotal">P${(item.price * item.qty).toFixed(2)}</td>
+            <td><button class="remove-btn">Remove</button></td>
+        `;
+        tbody.appendChild(tr);
+    });
+
+    // Attach listeners after rendering
+    document.querySelectorAll('.qty').forEach(input => {
+        input.addEventListener('change', e => {
+            const row = e.target.closest('.cart-item');
+            const idx = parseInt(row.dataset.index);
+            const cart = getCart();
+            cart[idx].qty = Math.max(1, parseInt(e.target.value) || 1);
+            saveCart(cart);
+            renderCart();
         });
-        document.querySelectorAll('.remove-btn').forEach(button => {
-            button.addEventListener('click', e => {
-                e.target.closest('.cart-item').remove();
-                updateCart();
-            });
+    });
+
+    document.querySelectorAll('.remove-btn').forEach(button => {
+        button.addEventListener('click', e => {
+            const row = e.target.closest('.cart-item');
+            const idx = parseInt(row.dataset.index);
+            const cart = getCart();
+            cart.splice(idx, 1);
+            saveCart(cart);
+            renderCart();
         });
-        updateCart();
-    </script>
+    });
+
+    updateTotals();
+}
+
+function updateTotals() {
+    let subtotal = 0;
+    document.querySelectorAll('.cart-item').forEach(item => {
+        const price = parseFloat(item.dataset.price);
+        const qty = parseFloat(item.querySelector('.qty')?.value || 0);
+        subtotal += price * qty;
+    });
+    const tax = subtotal * TAX_RATE;
+    document.getElementById('cart-subtotal').textContent = `P${subtotal.toFixed(2)}`;
+    document.getElementById('cart-tax').textContent = `P${tax.toFixed(2)}`;
+    document.getElementById('cart-total').textContent = `P${(subtotal + tax).toFixed(2)}`;
+}
+
+renderCart();
 </body>
 </html>
